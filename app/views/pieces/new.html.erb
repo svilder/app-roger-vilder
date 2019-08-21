@@ -19,8 +19,8 @@
           <%= f.input :category, as: :radio_buttons, collection: Piece::CATEGORIES, label: 'Categorie', wrapper: :horizontal_collection_inline %>
           <%= f.input :collection, as: :radio_buttons, collection: Piece::COLLECTIONS, label: 'Collection', wrapper: :vertical_collection_inline %>
 
-          <%= f.input :image, input_html: {class: "hidden", id: 'photo-input'}, label_html: {class: 'upload-photo'}, label: "📷 N'oublie pas l'image ! " %>
-          <%= f.input :photo_cache, as: :hidden %>
+          <%= f.input :image, as: :hidden, input_html: {class: "hidden", id: 'photo-input'}, label_html: {class: 'upload-photo'}, label: "📷 N'oublie pas l'image ! " %>
+
           <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
 
           <%= f.submit "Envoyer", class: "btn btn-primary" %>

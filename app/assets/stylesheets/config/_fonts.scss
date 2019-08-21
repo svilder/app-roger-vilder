@@ -1,9 +1,20 @@
 // Import Google fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
-
+// @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
+@import url('https://fonts.googleapis.com/css?family=Abel|Advent+Pro:700|Anaheim|Asap+Condensed:400,700|Asap:400,700|Baloo|Barlow+Semi+Condensed:400,700|Codystar|Comfortaa&display=swap');
 // Define fonts for body and headers
-$body-font: "Open Sans", "Helvetica", "sans-serif";
-$headers-font: "Raleway", "Helvetica", "sans-serif";
+$body-font: "Asap Condensed", "Helvetica", "sans-serif";
+$headers-font: "Asap", "Helvetica", "sans-serif";
+
+
+// font-family: 'Abel', sans-serif;
+// font-family: 'Advent Pro', sans-serif;
+// font-family: 'Anaheim', sans-serif;
+// font-family: 'Asap Condensed', sans-serif;
+// font-family: 'Baloo', cursive;
+// font-family: 'Barlow Semi Condensed', sans-serif;
+// font-family: 'Codystar', cursive;
+// font-family: 'Comfortaa', cursive;
+// font-family: 'Asap', sans-serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {

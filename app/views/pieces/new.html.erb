@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="form-post">
+        <h1>🐲 Rogeeeeeeeeeeeeeer ! 🐲</h1>
+        <p>Pour ajouter une nouvelle oeuvre , rentre les informations ci-dessous :</p>
+
+        <%= simple_form_for(@piece) do |f| %>
+          <%= f.input :name, label: 'Nom', placeholder: 'Circonvolutions 17' %>
+          <%= f.input :description, label: 'Description', placeholder: 'Musée Pompidou, ou toute autre précision' %>
+          <div class="row d-flex justify-content-around">
+            <div class="col-xs-6">
+              <%= f.input :year, label: 'Année', placeholder:'2040' %>
+            </div>
+            <div class="col-xs-6">
+              <%= f.input :dimensions, label: 'Dimensions', placeholder:'Format : 150 x 150 x 18 cm' %>
+            </div>
+          </div>
+          <%= f.input :category, as: :radio_buttons, collection: Piece::CATEGORIES, label: 'Categorie', wrapper: :horizontal_collection_inline %>
+          <%= f.input :collection, as: :radio_buttons, collection: Piece::COLLECTIONS, label: 'Collection', wrapper: :vertical_collection_inline %>
+
+          <%= f.input :image, input_html: {class: "hidden", id: 'photo-input'}, label_html: {class: 'upload-photo'}, label: "📷 N'oublie pas l'image ! " %>
+          <%= f.input :photo_cache, as: :hidden %>
+          <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
+
+          <%= f.submit "Envoyer", class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- , wrapper: :custom_collection_inline, -->

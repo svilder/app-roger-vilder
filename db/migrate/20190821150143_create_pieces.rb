@@ -8,6 +8,7 @@ class CreatePieces < ActiveRecord::Migration[6.0]
       t.string :image
       t.string :category
       t.string :collection
+      t.string :photo
 
       t.timestamps
     end

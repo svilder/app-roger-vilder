@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2019_08_21_150143) do
     t.string "image"
     t.string "category"
     t.string "collection"
+    t.string "photo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

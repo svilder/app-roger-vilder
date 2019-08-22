@@ -7,4 +7,6 @@ class Piece < ApplicationRecord
   validates :name, presence: true
   validates :year, presence: true
   validates :dimensions, presence: true
+
+  mount_uploader :photo, PhotoUploader
 end

@@ -15,7 +15,11 @@
         <% if piece.category == "Kinetics" %>
           <%= video_tag "#{piece.image}", controls: true, size: 300 %>
         <% else %>
-          <%= image_tag piece.image, size: 300 %>
+          <% if piece.photo.url.nil? %>
+            <%= image_tag piece.image, width: 300 %>
+          <% else %>
+            <%= cl_image_tag piece.photo, width: 300 %>
+          <% end %>
         <% end %>
       </div>
     <% end %>

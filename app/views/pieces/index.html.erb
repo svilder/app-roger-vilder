@@ -13,7 +13,8 @@
           Collection : <%= piece.collection %>
         </p>
         <% if piece.category == "Kinetics" %>
-          <%= video_tag "#{piece.image}", controls: true, size: 300 %>
+        <%= youtube_video piece.image %>
+        <!-- <%= video_tag "#{piece.image}", controls: true, size: 300 %> -->
         <% else %>
           <% if piece.photo.url.nil? %>
             <%= image_tag piece.image, width: 300 %>

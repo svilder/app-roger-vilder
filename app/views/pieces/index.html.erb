@@ -4,17 +4,8 @@
   <div class="cards">
     <% @pieces.each do |piece| %>
       <div class="card">
-        <p>
-          Name : <%= piece.name %>
-          Description : <%= piece.description %>
-          Dimensions : <%= piece.dimensions %>
-          Year : <%= piece.year %>
-          Category : <%= piece.category %>
-          Collection : <%= piece.collection %>
-        </p>
         <% if piece.category == "Kinetics" %>
         <%= youtube_video piece.image %>
-        <!-- <%= video_tag "#{piece.image}", controls: true, size: 300 %> -->
         <% else %>
           <% if piece.photo.url.nil? %>
             <%= image_tag piece.image, width: 300 %>
@@ -22,6 +13,8 @@
             <%= cl_image_tag piece.photo, width: 300 %>
           <% end %>
         <% end %>
+        <p><%= piece.name %> - <%= piece.year %> - <%= piece.description %></p>
+        <p><%= piece.collection %> - <%= piece.dimensions %></p>
       </div>
     <% end %>
   </div>

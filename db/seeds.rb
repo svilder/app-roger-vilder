@@ -12,9 +12,9 @@ require 'csv'
 puts "start spreading the news"
 
 Piece.destroy_all
-# User.destroy_all
+User.destroy_all
 
-# User.create(email:"rvilder@gmail.com", password:"rogeroger")
+User.create(email:"rvilder@gmail.com", password:"rogeroger")
 
 
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'toutes_les_pieces_de_ta_vie.csv'))

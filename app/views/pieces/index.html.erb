@@ -1,5 +1,26 @@
 <div class="container">
-  <h1>Here, all pieces of RV</h1>
+<!--   <h1 class="text-center">Here, all pieces of RV</h1> -->
+
+  <div class="cards">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566825554/collectionKinetic_soifrx.png)">Kinetic
+      <a href=""><%= link_to "", 'pieces?collection=Kinetic' %></a>
+    </div>
+    <div class="card-category" style="background-image: url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566824687/8_zargx1.jpg), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))">Sculptur
+      <a href=""><%= link_to "", 'pieces?collection=Sculptur' %></a>
+    </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566824657/Dessin1971_wb0nij.jpg)">Drawing
+      <a href=""><%= link_to "", 'pieces?collection=Drawing' %></a>
+    </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566824693/ciel-cotoneux-2005--Perou_hki9ma.jpg)">Photo
+      <a href=""><%= link_to "", 'pieces?collection=Photo' %></a>
+    </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566825259/collectionAnimation_vas4ew.png)">Animation
+      <a href=""><%= link_to "", 'pieces?collection=Animation' %></a>
+    </div>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566825557/collectionVideo_nof3e7.png)">Video
+      <a href=""><%= link_to "", 'pieces?collection=Video' %></a>
+    </div>
+  </div>
 
   <div class="cards">
     <% @pieces.each do |piece| %>
@@ -7,7 +28,7 @@
         <% if piece.category == "Kinetics" %>
         <%= youtube_video piece.image %>
         <% else %>
-          <% if piece.photo.url.nil? %>
+          <% if piece.photo.nil? || piece.photo.url.nil? %>
             <%= image_tag piece.image, width: 300 %>
           <% else %>
             <%= cl_image_tag piece.photo, width: 300 %>
@@ -18,5 +39,4 @@
       </div>
     <% end %>
   </div>
-
 </div>

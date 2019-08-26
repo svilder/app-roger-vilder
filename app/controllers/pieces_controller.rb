@@ -2,7 +2,11 @@ class PiecesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @pieces = Piece.all
+    if params[:collection].nil?
+      @pieces = Piece.all.shuffle
+    else
+      @pieces = Piece.where(collection: params[:collection]).shuffle
+    end
   end
 
   def show

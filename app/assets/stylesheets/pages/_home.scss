@@ -3,13 +3,19 @@
 a {
   text-decoration: none;
   color: white;
+  transition: background 0.5s ease;
 }
 
 a:hover {
   text-decoration: none;
   color: white;
   h1 {
-    font-size: 70px;
+    font-weight: bold;
+    // border: 2px #F0F465 solid;
+    // box-shadow: 0 0 17px red;
+    -webkit-text-stroke: 1px red;
+    color: white;
+    text-shadow: 0 0 27px red;
   }
 }
 
@@ -20,5 +26,6 @@ a:hover {
   align-items: center;
   background-color: black;
   height: 100vh;
+  text-align: center;
 }
 

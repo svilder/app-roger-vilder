@@ -6,7 +6,4 @@ class PagesController < ApplicationController
 
   def contact
   end
-
-  def update_bio
-  end
 end

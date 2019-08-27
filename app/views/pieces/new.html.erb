@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container plus-navbar">
   <div class="row justify-content-center">
     <div class="col-xs-8 col-xs-offset-2">
       <div class="form-post">
@@ -19,9 +19,8 @@
           <%= f.input :category, as: :radio_buttons, collection: Piece::CATEGORIES, label: 'Categorie', wrapper: :horizontal_collection_inline %>
           <%= f.input :collection, as: :radio_buttons, collection: Piece::COLLECTIONS, label: 'Collection', wrapper: :vertical_collection_inline %>
 
-          <%= f.input :photo, input_html: { class: 'hidden', id: 'photo-input' }, label_html: { class: 'upload-photo'}, label: '📷 Upload a photo' %>
+          <%= f.input :photo, input_html: { class: 'hidden', id: 'photo-input' }, label_html: { class: 'upload-photo'}, label: "📷 N'oublie pas la photo !" %>
           <%= f.input :photo_cache, as: :hidden %>
-
 
           <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
 

@@ -1,5 +1,5 @@
 class PiecesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index, :show]
+  skip_before_action :authenticate_user!, only: :index
 
   def index
     if params[:collection].nil?
@@ -7,9 +7,6 @@ class PiecesController < ApplicationController
     else
       @pieces = Piece.where(collection: params[:collection]).shuffle
     end
-  end
-
-  def show
   end
 
   def new

@@ -1,55 +1,62 @@
-<div class="container">
+<div class="container plus-navbar">
   <ul class="list-inline tabs-underlined">
     <li>
-      <a href="#texts" class="tab-underlined active"><%= t('.titles.texts') %></a>
+      <a href="#texts" class="tab-underlined active"><%= t('contact.titles.contact') %></a>
     </li>
     <li>
-      <a href="#biography" class="tab-underlined">Biography</a>
+      <a href="#biography" class="tab-underlined"><%= t('contact.titles.bio') %></a>
     </li>
     <li>
-      <a href="#contact" class="tab-underlined">Contact</a>
+      <a href="#contact" class="tab-underlined"><%= t('contact.titles.texts') %></a>
     </li>
   </ul>
+
+  <div class="section two-columns">
+  <h5><a id="contact"></a><%= t('contact.titles.contact') %></h5>
+    <div class="text-pack">
+      <h6><%= t('contact.contact-name') %></h6>
+      <p><%= t('contact.contact-infos_html') %></p>
+    </div>
+  </div>
 
   <div class="section">
     <h5><a id="texts"></a><%= t('contact.titles.texts') %></h5>
     <div class="text-pack">
       <h6><%= t('contact.firsttext.title') %></h6>
-      <p><%= t('contact.firsttext.text') %></p>
+      <p><%= t('contact.firsttext.text_html') %></p>
       <p><%= t('contact.firsttext.signature') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.secondtext.title') %></h6>
-      <p><%= t('contact.secondtext.text') %></p>
+      <p><%= t('contact.secondtext.text_html') %></p>
       <p><%= t('contact.secondtext.signature') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.thirdtext.title') %></h6>
-      <p><%= t('contact.thirdtext.text') %></p>
+      <p><%= t('contact.thirdtext.text_html') %></p>
       <p><%= t('contact.thirdtext.signature') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.fourthtext.title') %></h6>
-      <p><%= t('contact.fourthtext.text') %></p>
+      <p><%= t('contact.fourthtext.text_html') %></p>
       <p><%= t('contact.fourthtext.signature') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.fifthtext.title') %></h6>
-      <p><%= t('contact.fifthtext.text') %></p>
+      <p><%= t('contact.fifthtext.text_html') %></p>
       <p><%= t('contact.fifthtext.signature') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.sixthtext.title') %></h6>
-      <p><%= t('contact.sixthtext.text') %></p>
+      <p><%= t('contact.sixthtext.text_html') %></p>
       <p><%= t('contact.sixthtext.signature') %></p>
     </div>
   </div>
 
-
-  <div class="section">
+  <div class="section two-columns">
     <h5><a id="biography"></a><%= t('contact.titles.bio') %></h5>
     <div class="text-pack">
-      <p><%= t('contact.biography') %></p>
+      <p><%= t('contact.biography_html') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.collections') %></h6>
@@ -71,14 +78,6 @@
       <h6><%= t('contact.biblio') %></h6>
       <p><%= t('contact.bib-sous-titre') %></p>
       <p><%= t('contact.bib-details_html') %></p>
-    </div>
-  </div>
-
-  <div class="section">
-  <h5><a id="contact"></a><%= t('contact.titles.contact') %></h5>
-    <div class="text-pack">
-      <h6><%= t('contact.contact-name') %></h6>
-      <p><%= t('contact.contact-infos_html') %></p>
     </div>
   </div>
 </div>

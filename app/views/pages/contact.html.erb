@@ -1,20 +1,20 @@
 <div class="container plus-navbar">
-  <ul class="list-inline tabs-underlined">
+  <ul class="list-inline tabs-underlined" id="top">
     <li>
-      <a href="#texts" class="tab-underlined active"><%= t('contact.titles.contact') %></a>
+      <a href="#contact" class="tab-underlined active"><%= t('contact.titles.contact') %></a>
+    </li>
+    <li>
+      <a href="#texts" class="tab-underlined"><%= t('contact.titles.texts') %></a>
     </li>
     <li>
       <a href="#biography" class="tab-underlined"><%= t('contact.titles.bio') %></a>
     </li>
-    <li>
-      <a href="#contact" class="tab-underlined"><%= t('contact.titles.texts') %></a>
-    </li>
   </ul>
 
-  <div class="section two-columns">
+  <div class="section">
   <h5><a id="contact"></a><%= t('contact.titles.contact') %></h5>
-    <div class="text-pack">
-      <h6><%= t('contact.contact-name') %></h6>
+    <div class="text-pack two-columns">
+      <em id="rv"><%= t('contact.contact-name') %></em>
       <p><%= t('contact.contact-infos_html') %></p>
     </div>
   </div>
@@ -53,31 +53,37 @@
     </div>
   </div>
 
-  <div class="section two-columns">
+  <div class="section">
     <h5><a id="biography"></a><%= t('contact.titles.bio') %></h5>
     <div class="text-pack">
       <p><%= t('contact.biography_html') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.collections') %></h6>
-      <p><%= t('contact.collections-details_html') %></p>
+      <p class="two-columns"><%= t('contact.collections-details_html') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.rewards') %></h6>
-      <p><%= t('contact.rewards-details_html') %></p>
+      <p class="two-columns"><%= t('contact.rewards-details_html') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.solo-shows') %></h6>
-      <p><%= t('contact.shows-details_html') %></p>
+      <p class="two-columns"><%= t('contact.shows-details_html') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.group-exhibitions') %></h6>
-      <p><%= t('contact.exihibitions-details_html') %></p>
+      <p class="two-columns"><%= t('contact.exihibitions-details_html') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.biblio') %></h6>
       <p><%= t('contact.bib-sous-titre') %></p>
-      <p><%= t('contact.bib-details_html') %></p>
+      <p class="two-columns"><%= t('contact.bib-details_html') %></p>
     </div>
+    <br>
+    <br>
+    <div class="text-center">
+      <a href="#top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <br>
   </div>
 </div>

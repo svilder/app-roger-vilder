@@ -5,5 +5,7 @@ class PagesController < ApplicationController
   end
 
   def contact
+    @bioelements = Bioelement.all
+    @bioelement = Bioelement.new
   end
 end

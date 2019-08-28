@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_21_150143) do
+ActiveRecord::Schema.define(version: 2019_08_28_132733) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bioelements", force: :cascade do |t|
+    t.string "name"
+    t.string "section"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "pieces", force: :cascade do |t|
     t.string "name"

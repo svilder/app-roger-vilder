@@ -1,9 +1,7 @@
 // event listener sur le click du edit_button
 const button = document.querySelector('#edit-button');
 button.addEventListener('click', (event) => {
-    // Callback
-  event.currentTarget.innerText = 'Hold still...';
-  event.currentTarget.setAttribute("disabled", "");
+  console.log(event);
 });
 
 // ajouter un text field avec bouton send

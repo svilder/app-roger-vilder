@@ -19,6 +19,11 @@
           <%= link_to "🇬🇧", { :locale=>'en' }, class: "nav-link" %>
         <% end %>
       </li>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </div>

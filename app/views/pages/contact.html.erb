@@ -55,29 +55,42 @@
 
   <div class="section">
     <h5><a id="biography"></a><%= t('contact.titles.bio') %></h5>
+    <% if user_signed_in? %>
+      <div class="edit-button">
+        <button id="edit-button">
+          <i class="fas fa-pencil-alt"></i>
+        </button>
+      </div>
+    <% end %>
+    <div class="send hidden">
+      <!-- activation apres edit button -->
+    </div>
     <div class="text-pack">
       <p><%= t('contact.biography_html') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.collections') %></h6>
-      <p class="two-columns"><%= t('contact.collections-details_html') %></p>
+      <p class="two-columns edit-place"><%= t('contact.collections-details_html') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.rewards') %></h6>
-      <p class="two-columns"><%= t('contact.rewards-details_html') %></p>
+      <p class="two-columns edit-place"><%= t('contact.rewards-details_html') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.solo-shows') %></h6>
-      <p class="two-columns"><%= t('contact.shows-details_html') %></p>
+      <p class="two-columns edit-place"><%= t('contact.shows-details_html') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.group-exhibitions') %></h6>
-      <p class="two-columns"><%= t('contact.exihibitions-details_html') %></p>
+      <p class="two-columns edit-place"><%= t('contact.exihibitions-details_html') %></p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.biblio') %></h6>
       <p><%= t('contact.bib-sous-titre') %></p>
-      <p class="two-columns"><%= t('contact.bib-details_html') %></p>
+      <p class="two-columns edit-place"><%= t('contact.bib-details_html') %></p>
+    </div>
+    <div class="send hidden">
+      <!-- activation apres edit button -->
     </div>
     <br>
     <br>

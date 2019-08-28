@@ -18,17 +18,26 @@ button.addEventListener('click', (event) => {
     element.insertAdjacentHTML('beforeend', '<input type="submit" value="Enregistrer" class="send-button">');
     element.classList.remove('hidden');
   });
-});
-
-const send = document.querySelectorAll('.send-button');
-send.forEach(function(element) {
-  element.addEventListener('click', (event) => {
-    const input = document.querySelectorAll('.bio-new-entry').innerText;
-    console.log(input);
+  const send = document.querySelectorAll('.send-button');
+  send.forEach(function(element) {
+    element.addEventListener('click', (event) => {
+      const input = document.querySelectorAll('.bio-new-entry');
+      place.forEach(function(element) {
+        element.insertAdjacentHTML('beforeend', 'input');
+      });
+    });
   });
 });
 
+function saveEdits() {
 
-input.forEach(function(element) {
-      element.insertAdjacentHTML('beforeend', '<br> input');
-    });
+//get the editable element
+var editElem = document.getElementById("edit");
+
+//get the edited element content
+var userVersion = editElem.innerHTML;
+
+//save the content to local storage
+localStorage.userEdits = userVersion;
+
+}

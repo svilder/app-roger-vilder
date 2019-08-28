@@ -1,12 +1,20 @@
 class BioelementsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
+  def index
+    @bioelements = Bioelement.all
+  end
+
+  def new
+    @bioelement = Bioelement.new
+  end
+
   def create
     @bioelement = Bioelement.new(bioelement_params)
     if @bioelement.save
-      redirect_to bioelements_path
+      redirect_to contact_path
     else
-      render :new
+      render :contact
     end
   end
 

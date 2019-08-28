@@ -21,10 +21,11 @@
 
           <%= f.input :photo, input_html: { class: 'hidden', id: 'photo-input' }, label_html: { class: 'upload-photo'}, label: "📷 N'oublie pas la photo !" %>
           <%= f.input :photo_cache, as: :hidden %>
-
           <%= image_tag "", width: 300, class: "hidden", id: "photo-preview" %>
 
-          <%= f.submit "Envoyer", class: "btn btn-primary" %>
+          <div class="button">
+            <%= f.submit "Envoyer", class: "btn btn-roger" %>
+          </div>
         <% end %>
       </div>
     </div>
@@ -32,7 +33,3 @@
 </div>
 
 
-
-
-
-<!-- , wrapper: :custom_collection_inline, -->

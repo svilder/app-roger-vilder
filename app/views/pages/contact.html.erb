@@ -56,15 +56,17 @@
   <div class="section">
     <h5><a id="biography"></a><%= t('contact.titles.bio') %></h5>
     <% if user_signed_in? %>
-      <div class="edit-button">
-        <button id="edit-button">
-          <i class="fas fa-pencil-alt"></i>
-        </button>
+      <div class="form-post">
+        <p>Pour ajouter une information dans la biographie, saisis-la ici</p>
+        <%= simple_form_for(@bioelement) do |f| %>
+          <%= f.input :name, label: 'Nom', placeholder: '2040 - Galerie de la Galaxie, Univers' %>
+          <%= f.input :section, as: :radio_buttons, collection: Bioelement::SECTIONS, label: 'Section', wrapper: :horizontal_collection_inline %>
+          <div class="button">
+            <%= f.submit "Envoyer", class: "btn btn-roger" %>
+          </div>
+        <% end %>
       </div>
     <% end %>
-    <div class="send hidden">
-      <!-- activation apres edit button -->
-    </div>
 
     <div class="text-pack">
       <p><%= t('contact.biography_html') %></p>
@@ -74,7 +76,9 @@
       <p class="two-columns edit-place">
         <%= t('contact.collections-details_html') %>
         <% @bioelements.each do |bioelement| %>
-          <br><%= bioelement.name if bioelement.section == "Collections publiques et privées" %>
+          <% if bioelement.section == "Collections publiques et privées" %>
+            <%= bioelement.name %><br>
+          <% end %>
         <% end %>
       </p>
     </div>
@@ -83,7 +87,9 @@
       <p class="two-columns edit-place">
         <%= t('contact.rewards-details_html') %>
         <% @bioelements.each do |bioelement| %>
-          <br><%= bioelement.name if bioelement.section == "Prix" %>
+          <% if bioelement.section == "Prix" %>
+            <%= bioelement.name %><br>
+          <% end %>
         <% end %>
       </p>
     </div>
@@ -92,7 +98,9 @@
       <p class="two-columns edit-place">
         <%= t('contact.shows-details_html') %>
         <% @bioelements.each do |bioelement| %>
-          <br><%= bioelement.name if bioelement.section == "Expositions personnelles" %>
+          <% if bioelement.section == "Expositions personnelles" %>
+            <%= bioelement.name %>
+          <% end %>
         <% end %>
       </p>
     </div>
@@ -101,7 +109,9 @@
       <p class="two-columns edit-place">
         <%= t('contact.exihibitions-details_html') %>
         <% @bioelements.each do |bioelement| %>
-          <br><%= bioelement.name if bioelement.section == "Expositions Collectives" %>
+          <% if bioelement.section == "Expositions Collectives" %>
+            <%= bioelement.name %>
+          <% end %>
         <% end %>
       </p>
     </div>
@@ -111,12 +121,11 @@
       <p class="two-columns edit-place">
         <%= t('contact.bib-details_html') %>
         <% @bioelements.each do |bioelement| %>
-          <br><%= bioelement.name if bioelement.section == "Bibliographie" %>
+          <% if bioelement.section == "Bibliographie" %>
+            <%= bioelement.name %>
+          <% end %>
         <% end %>
       </p>
-    </div>
-    <div class="send hidden">
-      <!-- activation apres edit button -->
     </div>
     <br>
     <br>

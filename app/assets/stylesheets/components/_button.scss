@@ -1,0 +1,16 @@
+.btn-roger {
+  color: black;
+  background: linear-gradient(rgba(255,232,55,0), rgba(255,232,55,1));
+  border: none;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.btn-roger:hover {
+  background: linear-gradient(rgba(255,232,55,1), rgba(255,232,55,0));
+  border: none;
+}

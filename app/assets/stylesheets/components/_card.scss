@@ -5,12 +5,26 @@
 }
 
 .card {
-  max-width: 450px;
+  // max-width: 500px;
+  // max-height: 500px;
   padding: 10px;
+  margin: 15px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
+  border: none;
+  border-radius: 3px;
+}
+
+.card-image {
+  max-width: 440px;
+  max-height: 440px;
+}
+
+.card-details {
+  margin-top: 7px;
+  font-weight: lighter;
 }
 
 .card-category {

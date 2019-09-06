@@ -30,16 +30,26 @@
     <% @pieces.each do |piece| %>
       <div class="card">
         <% if piece.category == "Kinetics" %>
-        <%= youtube_video piece.image %>
+        <div class="card-image">
+          <%= youtube_video piece.image %>
+        </div>
         <% else %>
-          <% if piece.photo.nil? || piece.photo.url.nil? %>
-            <%= image_tag piece.image, width: 300 %>
-          <% else %>
-            <%= cl_image_tag piece.photo, width: 300 %>
-          <% end %>
+          <div class="">
+            <% if piece.photo.nil? || piece.photo.url.nil? %>
+              <%= image_tag piece.image, class: "card-image" %>
+            <% else %>
+              <%= cl_image_tag piece.photo, class: "card-image" %>
+            <% end %>
+          </div>
         <% end %>
-        <p><%= piece.name %> - <%= piece.year %> - <%= piece.description %></p>
-        <p><%= piece.collection %> - <%= piece.dimensions %></p>
+        <div class="card-details">
+          <p>
+            <%= piece.name %><% unless piece.year == "" || piece.year.nil? || piece.year == "." %> - <%= piece.year %> <% end %>
+            <% unless piece.description == "" || piece.description.nil? || piece.description == "." %><br><%= piece.description %><% end %>
+            <br>
+            <%= piece.collection %> <% unless piece.dimensions == "" || piece.dimensions.nil? || piece.dimensions == "." %> - <%= piece.dimensions %> <% end %>
+          </p>
+        </div>
       </div>
     <% end %>
   </div>

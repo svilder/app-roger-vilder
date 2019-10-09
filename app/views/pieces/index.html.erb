@@ -31,15 +31,15 @@
       <div class="card">
         <% if piece.category == "Kinetics" %>
         <div class="card-image">
-          <%#= youtube_video piece.image %>
+          <%= youtube_video piece.image %>
         </div>
         <% else %>
           <div class="">
-            <%# if piece.photo.nil? || piece.photo.url.nil? %>
-              <%#= image_tag piece.image, class: "card-image" %>
-            <%# else %>
-              <%#= cl_image_tag piece.photo, class: "card-image" %>
-            <%# end %>
+            <% if piece.photo.nil? || piece.photo.url.nil? %>
+              <%= image_tag piece.image, class: "card-image" %>
+            <% else %>
+              <%= cl_image_tag piece.photo, class: "card-image" %>
+            <% end %>
             <p>oooooooooooooooooooook</p>
           </div>
         <% end %>

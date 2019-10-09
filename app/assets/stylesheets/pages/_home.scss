@@ -3,21 +3,13 @@
 a {
   text-decoration: none;
   color: white;
-  transition: background 0.5s ease;
 }
 
 a:hover {
   text-decoration: none;
   color: white;
-  h1 {
-    font-weight: bold;
-    // border: 2px #F0F465 solid;
-    // box-shadow: 0 0 17px red;
-    -webkit-text-stroke: 1px #EB2000;
-    color: #E4D601;
-    text-shadow: 0 0 10px #EB2000;
-  }
 }
+
 
 .home-text {
   display: flex;
@@ -27,5 +19,17 @@ a:hover {
   background-color: black;
   height: 100vh;
   text-align: center;
+  h1 {
+    transition: all 1s ease-in-out;
+  }
+  h1:hover {
+    // font-weight: bolder;
+    transform: scale(1.2);
+    // border: 2px #F0F465 solid;
+    // box-shadow: 0 0 17px red;
+    // -webkit-text-stroke: 1px #EB2000;
+    // color: #E4D601;
+    text-shadow: 0 0 10px #EB2000;
+  }
 }
 

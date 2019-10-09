@@ -2,11 +2,25 @@
   <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "logo.png" %>
     <% end %>
-
+  <div class="navbar-contact collapse navbar-collapse">
+    <% if current_page?('/contact')%>
+      <ul class="navbar-nav mr-auto" id="top">
+        <li class="nav-item">
+          <a href="#contact" class="nav-link"><%= t('contact.titles.contact') %></a>
+        </li>
+        <li class="nav-item">
+          <a href="#texts" class="nav-link"><%= t('contact.titles.texts') %></a>
+        </li>
+        <li class="nav-item">
+          <a href="#biography" class="nav-link"><%= t('contact.titles.bio') %></a>
+        </li>
+      </ul>
+    <% end %>
+  </div>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <%= link_to t('navbar.work'), pieces_path, class: "nav-link" %>
       </li>
       <li class="nav-item">

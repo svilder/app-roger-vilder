@@ -12,13 +12,13 @@
       <li class="nav-item">
         <%= link_to t('navbar.contact'), contact_path, class: "nav-link" %>
       </li>
-      <li class="nav-item">
-        <% if I18n.locale == I18n.default_locale %>
-          <%= link_to "🇫🇷", { :locale=>'fr' }, class: "nav-link" %>
-        <% else %>
-          <%= link_to "🇬🇧", { :locale=>'en' }, class: "nav-link" %>
-        <% end %>
-      </li>
+      <!-- <li class="nav-item"> -->
+        <%# if I18n.locale == I18n.default_locale %>
+          <%#= link_to "🇫🇷", { :locale=>'fr' }, class: "nav-link" %>
+        <%# else %>
+          <%#= link_to "🇬🇧", { :locale=>'en' }, class: "nav-link" %>
+        <%# end %>
+      <!-- </li> -->
       <% if user_signed_in? %>
         <li class="nav-item">
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>

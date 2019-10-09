@@ -10,14 +10,18 @@ a:hover {
   color: white;
 }
 
+body {
+  // background: black;
+}
 
 .home-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background: black;
   height: 100vh;
+  margin: 0;
   text-align: center;
   h1 {
     transition: all 1s ease-in-out;
@@ -33,3 +37,29 @@ a:hover {
   }
 }
 
+
+@include media-breakpoint-only(xs) {
+  .home-text img{
+    max-height: 300px;
+  }
+}
+@include media-breakpoint-only(sm) {
+  .home-text img{
+    max-height: 400px;
+  }
+}
+@include media-breakpoint-only(md) {
+  .home-text img{
+    max-height: 400px;
+  }
+}
+@include media-breakpoint-only(lg) {
+  .home-text img{
+    max-height: 400px;
+  }
+}
+@include media-breakpoint-only(xl) {
+  .home-text img{
+    max-height: 500px;
+  }
+}

@@ -1,48 +1,49 @@
 <div class="container plus-navbar">
 <!--   <h1 class="text-center">Here, all pieces of RV</h1> -->
 
-  <div class="cards">
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566825554/collectionKinetic_soifrx.png)"> <%= t('index.kinetic') %>
+  <div class="my-cards-category">
+    <div class="my-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566825554/collectionKinetic_soifrx.png)"> <%= t('index.kinetic') %>
       <a href=""><%= link_to "", 'pieces?collection=Kinetic' %></a>
     </div>
-    <div class="card-category" style="background-image: url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566824687/8_zargx1.jpg), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"><%= t('index.sculptur') %>
+    <div class="my-card-category" style="background-image: url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566824687/8_zargx1.jpg), linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))"><%= t('index.sculptur') %>
       <a href=""><%= link_to "", 'pieces?collection=Sculptur' %></a>
     </div>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566824657/Dessin1971_wb0nij.jpg)"><%= t('index.drawing') %>
+    <div class="my-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566824657/Dessin1971_wb0nij.jpg)"><%= t('index.drawing') %>
       <a href=""><%= link_to "", 'pieces?collection=Drawing' %></a>
     </div>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566824693/ciel-cotoneux-2005--Perou_hki9ma.jpg)"><%= t('index.photo') %>
+    <div class="my-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566824693/ciel-cotoneux-2005--Perou_hki9ma.jpg)"><%= t('index.photo') %>
       <a href=""><%= link_to "", 'pieces?collection=Photo' %></a>
     </div>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566825259/collectionAnimation_vas4ew.png)"><%= t('index.animation') %>
+    <div class="my-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566825259/collectionAnimation_vas4ew.png)"><%= t('index.animation') %>
       <a href=""><%= link_to "", 'pieces?collection=Animation' %></a>
     </div>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566825557/collectionVideo_nof3e7.png)"><%= t('index.video') %>
+    <div class="my-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://res.cloudinary.com/dfbhkicfg/image/upload/v1566825557/collectionVideo_nof3e7.png)"><%= t('index.video') %>
       <a href=""><%= link_to "", 'pieces?collection=Video' %></a>
     </div>
   </div>
-  <br>
-  <br>
-  <br>
-  <br>
 
-  <div class="cards">
+  <div class="my-cards">
+<!--     <%= image_tag "film.gif" %> -->
     <% @pieces.each do |piece| %>
-      <div class="card">
+      <div class="my-card">
         <% if piece.category == "Kinetics" %>
-        <div class="card-image">
-          <%= youtube_video piece.image %>
+        <div class="">
+          <%#= youtube_video piece.image "https://www.youtube.com/watch?v=9PhhMhKAF2o" %>
+          <%= link_to "https://www.youtube.com/watch?v=#{piece.image}", target: "_blank" do %>
+            <%= image_tag "videos-gifs/rv.gif", class: "my-card-image" %>
+          <% end %>
+          <!-- <p>videoooo</p> -->
         </div>
         <% else %>
-          <div class="">
+          <!-- <div class=""> -->
             <% if piece.photo.nil? || piece.photo.url.nil? %>
-              <%= image_tag piece.image, class: "card-image" %>
+              <%= image_tag piece.image, class: "my-card-image" %>
             <% else %>
-              <%= cl_image_tag piece.photo, class: "card-image" %>
+              <%= cl_image_tag piece.photo, class: "my-card-image" %>
             <% end %>
-          </div>
+          <!-- </div> -->
         <% end %>
-        <div class="card-details">
+        <div class="my-card-details">
           <p>
             <%= piece.name %><% unless piece.year == "" || piece.year.nil? || piece.year == "." %> - <%= piece.year %> <% end %>
             <% unless piece.description == "" || piece.description.nil? || piece.description == "." %><br><%= piece.description %><% end %>

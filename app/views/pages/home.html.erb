@@ -1,3 +1,14 @@
+<% if user_signed_in? %>
+  <h3 class="text-center mt-3">Salut le père !</h3>
+  <div class="interface-user mb-4">
+    <div class="button">
+      <%= link_to "Ajouter un élément dans la biographie", contact_path, class: "btn btn-roger" %>
+    </div>
+    <div class="button">
+      <%= link_to "Ajouter une pièce", new_piece_path, class: "btn btn-roger" %>
+    </div>
+  <% end %>
+</div>
 
 <div class="home-text container-fluid plus-navbar">
   <%= link_to pieces_path do %>
@@ -6,4 +17,3 @@
     <p><%= t('home.catchphrase') %></p>
   <% end %>
 </div>
-

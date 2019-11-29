@@ -37,6 +37,7 @@ fr:
     work: "Oeuvres"
     contact: "Contact"
   index:
+    all: "Toutes les pièces"
     kinetic: "Cinétiques"
     sculptur: "Sculptures"
     drawing: "Dessins"

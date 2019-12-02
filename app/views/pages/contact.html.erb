@@ -1,7 +1,7 @@
 <div class="container plus-navbar">
   <!-- <div class="row"> -->
   <div class="section" id="top">
-  <h5><a id="contact"></a><%= t('contact.titles.contact') %></h5>
+  <h5><a id="contact" class="anchor"></a><%= t('contact.titles.contact') %></h5>
     <div class="text-pack two-columns">
       <em id="rv"><%= t('contact.contact-name') %></em>
       <p><%= t('contact.contact-infos_html') %></p>
@@ -9,7 +9,7 @@
   </div>
 
   <div class="section">
-    <h5><a id="biography"></a><%= t('contact.titles.bio') %></h5>
+    <h5><a id="biography" class="anchor"></a><%= t('contact.titles.bio') %></h5>
     <% if user_signed_in? %>
       <div class="form-post">
         <p>Pour ajouter une information dans la biographie, saisis-la ici</p>
@@ -90,7 +90,7 @@
   <br>
 
     <div class="section">
-      <h5><a id="texts"></a><%= t('contact.titles.texts') %></h5>
+      <h5><a id="texts" class="anchor"></a><%= t('contact.titles.texts') %></h5>
       <div class="text-pack">
         <h6><%= t('contact.firsttext.title') %></h6>
         <p><%= t('contact.firsttext.text_html') %></p>

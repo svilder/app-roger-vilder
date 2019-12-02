@@ -1,8 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: transparent;
-  background: transparent;
-  // transition: 0.2s background-color ease;
+  background-color: white;
+  // background: transparent;
+  // transition: background-color 0.1s linear;
 }
 
 .navbar-lewagon-white {
@@ -18,5 +18,10 @@
 }
 
 .plus-navbar {
-  margin-top: 65px;
+  margin-top: 90px;
+}
+
+.anchor {
+  position: relative;
+  top: -90px;
 }

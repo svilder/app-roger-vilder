@@ -1,0 +1,91 @@
+<div class="navbar navbar-expand-sm navbar-light fixed-top navbar-lewagon topnav" id="myTopnav">
+  <div class="container-fluid">
+    <%= link_to "/", class: "navbar-brand" do %>
+      <%= image_tag "logo.png" %>
+      <% end %>
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+
+    <% if current_page?('/pieces')%>
+      <div class="navbar-pieces collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <%= link_to t('index.kinetic'), 'pieces?collection=Kinetic', class: "nav-link active" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('index.sculptur'), 'pieces?collection=Sculptur', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('index.drawing'), 'pieces?collection=Drawing', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('index.photo'), 'pieces?collection=Photo', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('index.animation'), 'pieces?collection=Animation', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('index.video'), 'pieces?collection=Video', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('index.all'), 'pieces', class: "nav-link" %>
+            </li>
+          </ul>
+      </div>
+    <% end %>
+
+    <% if current_page?('/contact')%>
+      <div class="navbar-contact collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a href="#contact" class="nav-link active"><%= t('contact.titles.contact') %></a>
+            </li>
+            <li class="nav-item">
+              <a href="#biography" class="nav-link"><%= t('contact.titles.bio') %></a>
+            </li>
+            <li class="nav-item">
+              <a href="#texts" class="nav-link"><%= t('contact.titles.texts') %></a>
+            </li>
+          </ul>
+      </div>
+    <% end %>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to t('navbar.work'), pieces_path, class: "nav-link active" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to t('navbar.contact'), contact_path, class: "nav-link" %>
+        </li>
+        <!-- <li class="nav-item"> -->
+          <%# if I18n.locale == I18n.default_locale %>
+            <%#= link_to "🇫🇷", { :locale=>'fr' }, class: "nav-link" %>
+          <%# else %>
+            <%#= link_to "🇬🇧", { :locale=>'en' }, class: "nav-link" %>
+          <%# end %>
+        <!-- </li> -->
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>

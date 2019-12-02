@@ -1,4 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light fixed-top navbar-lewagon">
+  <div class="container-fluid">
   <%= link_to "/", class: "navbar-brand" do %>
     <%= image_tag "logo.png" %>
     <% end %>
@@ -10,8 +11,8 @@
   <% if current_page?('/pieces')%>
     <div class="navbar-pieces collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <%= link_to t('index.kinetic'), 'pieces?collection=Kinetic', class: "nav-link" %>
+          <li class="nav-item">
+            <%= link_to t('index.kinetic'), 'pieces?collection=Kinetic', class: "nav-link active" %>
           </li>
           <li class="nav-item">
             <%= link_to t('index.sculptur'), 'pieces?collection=Sculptur', class: "nav-link" %>
@@ -72,5 +73,6 @@
         </li>
       <% end %>
     </ul>
+  </div>
   </div>
 </div>

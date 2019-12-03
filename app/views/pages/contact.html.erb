@@ -29,57 +29,57 @@
     <div class="text-pack">
       <h6><%= t('contact.collections') %></h6>
       <p class="two-columns edit-place">
-        <%= t('contact.collections-details_html') %>
         <% @bioelements.each do |bioelement| %>
           <% if bioelement.section == "Collections publiques et privées" %>
             <%= bioelement.name %><br>
           <% end %>
         <% end %>
+        <%= t('contact.collections-details_html') %>
       </p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.rewards') %></h6>
       <p class="two-columns edit-place">
-        <%= t('contact.rewards-details_html') %>
         <% @bioelements.each do |bioelement| %>
           <% if bioelement.section == "Prix" %>
             <%= bioelement.name %><br>
           <% end %>
         <% end %>
+        <%= t('contact.rewards-details_html') %>
       </p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.solo-shows') %></h6>
       <p class="two-columns edit-place">
-        <%= t('contact.shows-details_html') %>
         <% @bioelements.each do |bioelement| %>
           <% if bioelement.section == "Expositions personnelles" %>
             <%= bioelement.name %>
           <% end %>
         <% end %>
+        <%= t('contact.shows-details_html') %>
       </p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.group-exhibitions') %></h6>
       <p class="two-columns edit-place">
-        <%= t('contact.exihibitions-details_html') %>
         <% @bioelements.each do |bioelement| %>
           <% if bioelement.section == "Expositions Collectives" %>
             <%= bioelement.name %>
           <% end %>
         <% end %>
+        <%= t('contact.exihibitions-details_html') %>
       </p>
     </div>
     <div class="text-pack">
       <h6><%= t('contact.biblio') %></h6>
       <p><%= t('contact.bib-sous-titre') %></p>
       <p class="two-columns edit-place">
-        <%= t('contact.bib-details_html') %>
         <% @bioelements.each do |bioelement| %>
           <% if bioelement.section == "Bibliographie" %>
             <%= bioelement.name %>
           <% end %>
         <% end %>
+        <%= t('contact.bib-details_html') %>
       </p>
     </div>
 

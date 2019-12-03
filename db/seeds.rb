@@ -29,6 +29,7 @@ csv.each do |row|
   t.category = row['category']
   t.collection = row['collection']
   t.photo = row['photo']
+  t.youtube = row['youtube']
   t.save
   puts "#{t.name}, #{t.dimensions} saved"
 end

@@ -8,8 +8,8 @@
         <% if piece.category == "Kinetics" %>
         <div class="">
           <%#= youtube_video piece.image "https://www.youtube.com/watch?v=9PhhMhKAF2o" %>
-          <%= link_to "https://www.youtube.com/watch?v=#{piece.image}", target: "_blank" do %>
-            <%= image_tag "videos-gifs/rv.gif", class: "my-card-image" %>
+          <%= link_to "https://www.youtube.com/watch?v=#{piece.youtube}", target: "_blank" do %>
+            <%= image_tag piece.image, class: "my-card-image" %>
           <% end %>
           <!-- <p>videoooo</p> -->
         </div>
